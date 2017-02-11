@@ -1,0 +1,18 @@
+{
+  "name": "scs-commerce.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:scs-commerce/scs-commerce.github.io.git",
+  "author": "Falk Hoppe <falkhoppe81@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "pug views -o dist",
+    "deploy": "npm run build && git-directory-deploy --directory dist/ --repo gh-pages"
+  },
+  "dependencies": {
+    "git-directory-deploy": "^1.5.1",
+    "jstransformer-markdown-it": "^2.0.0",
+    "pug": "^2.0.0-beta11",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
