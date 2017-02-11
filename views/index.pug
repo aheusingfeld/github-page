@@ -3,7 +3,10 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     title SCS Commerce
+
+    link(rel="stylesheet" href="./github-gist.css")
     link(rel="stylesheet" href="./index.css")
+
   body
     .container
       :markdown-it
@@ -30,13 +33,14 @@ html(lang="en")
 
         ## Running the demo setup
 
-        0. pre-requisites
+        0. **pre-requisites**
 
         - [install docker](https://docs.docker.com/engine/installation/)
 
-        1. checkout the scs-commerce repositories
+        1. **checkout the scs-commerce repositories**
 
-        ```
+
+        ```shell
         mkdir scs-commerce
         cd ./scs-commerce
         git clone git@github.com:scs-commerce/landing-page.git
@@ -45,16 +49,20 @@ html(lang="en")
         git clone git@github.com:scs-commerce/integration.git
         ```
 
-        2. build integration project
+        2. **build integration project**
 
-        ```
+        ```shell
         cd ./integration
         docker-compose build
         docker-compose up
         ```
 
-        3. visit landing page
+        3. **visit landing page**
 
-        ```
+        ```shell
         open http://localhost
         ```
+
+    script(src='./highlight.pack.js')
+    script.
+      hljs.initHighlightingOnLoad();
