@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "pug views -o dist",
-    "deploy": "npm run build && git-directory-deploy --directory dist/ --repo gh-pages"
+    "deploy": "npm run build && git-directory-deploy --directory dist/ --repo gh-pages --branch master"
   },
   "dependencies": {
     "git-directory-deploy": "^1.5.1",
