@@ -4,9 +4,10 @@
   "main": "index.js",
   "repository": "git@github.com:scs-commerce/scs-commerce.github.io.git",
   "author": "Falk Hoppe <falkhoppe81@gmail.com>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "build:license": "cp LICENSE dist/LICENSE.txt",
+    "build:images": "mkdir -p dist/images && cp images/*.png dist/images/.",
     "build:vendor:scripts": "cp node_modules/highlightjs/highlight.pack.js dist/. && cp node_modules/highlightjs/styles/github-gist.css dist/.",
     "build:assets": "pug views -o dist && stylus styles/index.styl -o dist/index.css",
     "build": "npm-run-all --parallel build:*",
