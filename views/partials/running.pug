@@ -1,0 +1,37 @@
+:markdown-it
+  ## Running the demo setup
+
+  0. **pre-requisites**
+
+  - [install docker](https://docs.docker.com/engine/installation/)
+
+  1. **checkout the scs-commerce repositories**
+
+
+  ```bash
+  # prepare base folder (can be named anything)
+  mkdir scs-commerce
+  cd ./scs-commerce
+
+  # checkout services
+  # for further details take a look at the single repositories
+  # https://github.com/scs-commerce/
+  git clone git@github.com:scs-commerce/landing-page.git
+  git clone git@github.com:scs-commerce/product-list.git
+  git clone git@github.com:scs-commerce/order.git
+  git clone git@github.com:scs-commerce/integration.git
+  ```
+
+  2. **build integration project**
+
+  ```bash
+  cd ./integration
+  docker-compose build
+  docker-compose up
+  ```
+
+  3. **visit landing page**
+
+  ```bash
+  open http://localhost
+  ```
